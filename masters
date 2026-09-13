@@ -8,3 +8,20 @@
     <title>Салон красоты «Пример» — Наши мастера</title>
 </head>
 <body>
+<!-- Автор страницы: Kereitbayev Ayan -->
+
+    <header>
+        <h1>Команда профессионалов</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="booking.html">Онлайн-запись</a></li>
+                <li><a href="colophon.html">О разработке</a></li>
+                <li><a href="masters.html">Мастера</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
