@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн-запись на процедуры в салон красоты. Выберите услугу, мастера, дату и время.">
+    <meta name="author" content="Yeszhanov Altynbek">
+    <title>Салон красоты «Пример» — Онлайн-запись</title>
+</head>
+<body>
+    <!-- Автор страницы: Yeszhanov Altynbek -->
+
+    <header>
+        <h1>Онлайн-запись на визит</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="booking.html">Онлайн-запись</a></li>
+                <li><a href="colophon.html">О разработке</a></li>
+                <li><a href="masters.html">Мастера</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Заполните форму для бронирования</h2>
+
+            <!-- Форма содержит все 9 обязательных типов полей и элементов -->
+            <form action="#" method="post">
+                <!-- Серверная обработка формы пока не подключена, так как серверный функционал не входит в рамки данного задания -->
+                
+                <fieldset>
+                    <legend>Контактная информация клиента</legend>
+                    
+                    <p>
+                        <label for="client-name">Ваше полное имя:</label>
+                        <input type="text" id="client-name" name="client_name" placeholder="Ержан Алиев" required>
+                    </p>
+
+                    <p>
+                        <label for="client-email">Электронная почта:</label>
+                        <input type="email" id="client-email" name="client_email" placeholder="example@domain.kz" required>
+                    </p>
+
+                    <p>
+                        <label for="client-phone">Номер телефона:</label>
+                        <input type="tel" id="client-phone" name="client_phone" placeholder="+77011234567" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Детали записи</legend>
+
+                    <p>
+                        <label for="booking-date">Желаемая дата визита:</label>
+                        <input type="date" id="booking-date" name="booking_date" required>
+                    </p>
+
+                    <p>
+                        <label for="guest-count">Количество человек:</label>
+                        <input type="number" id="guest-count" name="guest_count" min="1" max="5" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="service-select">Выберите необходимую услугу:</label>
+                        <select id="service-select" name="service_type">
+                            <option value="haircut">Женская стрижка</option>
+                            <option value="coloring">Окрашивание волос</option>
+                            <option value="manicure">Аппаратный маникюр</option>
+                            <option value="pedicure">SPA-педикюр</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Выберите категорию специалиста:</legend>
+                        <label><input type="radio" name="master_qualification" value="standard" checked> Мастер</label>
+                        <label><input type="radio" name="master_qualification" value="top"> Топ-стилист</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="special-wishes">Особые пожелания или комментарии:</label><br>
+                        <textarea id="special-wishes" name="wishes" rows="4" cols="50" placeholder="Укажите аллергические реакции или особые пожелания..."></textarea>
+                    </p>
+
+                    <p>
+                        <label>
+                            <!-- Комментарий: span использован исключительно для оборачивания выделенного текста внутри лейбла -->
+                            <input type="checkbox" name="policy_agreement" value="agreed" required>
+                            Я ознакомлен с <span class="highlight">правилами посещения</span> салона
+                        </label>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Отправить заявку">
+                        <input type="reset" value="Сбросить форму">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <aside>
+            <figure>
+                <img src="images/reception.jpg" alt="Администратор салона за стойкой рецепции отвечает на звонок">
+                <figcaption>Наши администраторы всегда готовы подсказать свободное время</figcaption>
+            </figure>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Адрес: г. Астана, пр. Кабанбай батыра, 53 | Телефон: <a href="tel:+77172000000">+7 (7172) 00-00-00</a> | Email: <a href="mailto:info@example-salon.kz">info@example-salon.kz</a></p>
+        <p>&copy; 2026 Салон красоты &laquo;Пример&raquo;. Все права защищены.</p>
+    </footer>
+</body>
+</html>
