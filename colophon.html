@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Техническая страница о процессе разработки веб-сайта салона красоты.">
+    <meta name="author" content="Студент 2">
+    <title>Салон красоты «Пример» — О разработке</title>
+</head>
+<body>
+    <!-- Автор страницы: Ayam Kereitbayev -->
+
+    <header>
+        <h1>Техническая страница (Colophon)</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="booking.html">Онлайн-запись</a></li>
+                <li><a href="colophon.html">О разработке</a></li>
+                <li><a href="masters.html">Мастера</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <!-- Комментарий: Используем section для структурирования информации о стандартах кодирования -->
+            <section id="tech-stack">
+                <h2>Технологический стек проекта</h2>
+                <p>Данный веб-сайт построен исключительно с использованием чистого <strong>HTML5</strong> в рамках учебного задания. В проекте не применяются CSS и JavaScript.</p>
+    
+                <figure>
+                    <img src="images/code-editor.jpg" alt="Процесс верстки кода в редакторе VS Code" width="600">
+                    <figcaption>Процесс создания семантической разметки в редакторе кода</figcaption>
+                </figure>
+            </section>
+    
+            <article id="code-standards">
+                <h2>Стандарты кода и валидация</h2>
+                <p>Все HTML-файлы проходят обязательную проверку через <em>W3C HTML Validator</em>. Для сохранения изменений в Git-репозитории используется сочетание клавиш <kbd>Ctrl</kbd> + <kbd>S</kbd> и последующий коммит через терминал.</p>
+                
+                <h3>Пример базовой структуры HTML5:</h3>
+                <!-- Пример применения элементов pre и code для вывода программного кода -->
+                <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="ru"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Заголовок страницы&lt;/title&gt;
+      &lt;/head&gt;
+    &lt;/pre&gt;</code>
+    
+                <p>Отлик валидатора в терминале отображается следующим образом:</p>
+                <p><samp>Document checking completed. No errors or warnings to show.</samp></p>
+            </article>
+    
+            <aside>
+                <p>Подробнее о правилах семантики можно прочитать на официальном ресурсе: <a href="https://developer.mozilla.org/ru/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.</p>
+            </aside>
+        </main>
+        <footer>
+        <p>Адрес: г. Астана, пр. Кабанбай батыра, 53 | Телефон: <a href="tel:+77172000000">+7 (7172) 00-00-00</a> | Email: <a href="mailto:info@example-salon.kz">info@example-salon.kz</a></p>
+        <p>&copy; 2026 Салон красоты &laquo;Пример&raquo;. Все права защищены.</p>
+    </footer>
+</body>
+</html>
