@@ -25,92 +25,79 @@
     </header>
     <main>
         <section>
-            <h2>Опубликованные отзывы</h2>
-            
+            <h2>Отзывы наших клиентов</h2>
+
             <article>
-                <h3>Отзыв от Динары С.</h3>
-                <p><strong>Услуга:</strong> Сложное окрашивание Airtouch</p>
+                <h3>Динара С.</h3>
+                <p><strong>Услуга:</strong> Окрашивание волос</p>
                 <p><em>Оценка: 5 из 5</em></p>
-                <p>Очень довольна результатом! Алина подобрала идеальный оттенок, волосы выглядят ухоженными и живыми.</p>
+                <p>Очень понравился результат. Арайлым внимательно выслушала мои пожелания и помогла подобрать подходящий оттенок.</p>
             </article>
 
-            <figure>
-                <img src="images/review-photo.jpg" alt="Результат окрашивания волос у клиента" width="400">
-                <figcaption>Результат визита к мастеру Алине</figcaption>
-            </figure>
+            <article>
+                <h3>Анастасия К.</h3>
+                <p><strong>Услуга:</strong> Маникюр</p>
+                <p><em>Оценка: 5 из 5</em></p>
+                <p>Всё прошло аккуратно и спокойно. Ногти получились именно такими, как я хотела. Аружан топ.</p>
+            </article>
         </section>
 
         <section>
-            <h2>Оставить свой отзыв</h2>
+            <h2>Оставить отзыв</h2>
 
-            <!-- Форма отзыва со всеми требуемыми элементами -->
             <form action="#" method="post">
-                <!-- Серверная обработка формы пока не подключена, так как серверный функционал не входит в рамки данного задания -->
-                
                 <fieldset>
-                    <legend>Информация об авторе</legend>
+                    <legend>Ваши данные</legend>
 
                     <p>
-                        <label for="author-name">Ваше имя:</label>
-                        <input type="text" id="author-name" name="author_name" placeholder="Мария" required>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
                     </p>
 
                     <p>
-                        <label for="author-email">Электронная почта:</label>
-                        <input type="email" id="author-email" name="author_email" placeholder="mariya@example.kz" required>
-                    </p>
-
-                    <p>
-                        <label for="author-phone">Номер телефона:</label>
-                        <input type="tel" id="author-phone" name="author_phone" placeholder="+77021112233" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
                     </p>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Ваша оценка и комментарий</legend>
+                    <legend>Отзыв</legend>
 
                     <p>
-                        <label for="visit-date">Дата визита:</label>
-                        <input type="date" id="visit-date" name="visit_date" required>
+                        <label for="date">Дата визита:</label>
+                        <input type="date" id="date" name="date" required>
                     </p>
 
                     <p>
-                        <label for="service-rating">Оценка работы (от 1 до 5):</label>
-                        <input type="number" id="service-rating" name="rating" min="1" max="5" value="5" required>
+                        <label for="rating">Оценка:</label>
+                        <input type="number" id="rating" name="rating" min="1" max="5" required>
                     </p>
 
                     <p>
-                        <label for="used-service">Какую услугу вы получали:</label>
-                        <select id="used-service" name="service_used">
-                            <option value="haircut">Женская стрижка</option>
+                        <label for="service">Услуга:</label>
+                        <select id="service" name="service">
+                            <option value="hair">Стрижка</option>
                             <option value="coloring">Окрашивание</option>
                             <option value="manicure">Маникюр</option>
                             <option value="other">Другое</option>
                         </select>
                     </p>
 
-                    <fieldset>
-                        <legend>Порекомендуете ли вы нас друзьям?</legend>
-                        <label><input type="radio" name="recommend" value="yes" checked> Да, обязательно</label>
-                        <label><input type="radio" name="recommend" value="no"> Нет</label>
-                    </fieldset>
-
                     <p>
-                        <label for="review-text">Текст вашего отзыва:</label><br>
-                        <textarea id="review-text" name="review_body" rows="5" cols="50" placeholder="Опишите ваши впечатления от посещения..." required></textarea>
+                        <label for="review">Ваш отзыв:</label><br>
+                        <textarea id="review" name="review" rows="5" cols="40" placeholder="Напишите ваш отзыв..." required></textarea>
                     </p>
 
                     <p>
                         <label>
-                            <!-- Комментарий: span применен для локального выделения текста внутри label -->
-                            <input type="checkbox" name="publish_permission" value="allow" checked>
-                            Разрешаю <span class="highlight">публикацию отзыва</span> на сайте
+                            <input type="checkbox" name="publish" value="yes">
+                            Разрешаю опубликовать мой отзыв
                         </label>
                     </p>
 
                     <p>
-                        <input type="submit" value="Отправить отзыв">
-                        <input type="reset" value="Сбросить поля">
+                        <input type="submit" value="Отправить">
+                        <input type="reset" value="Очистить">
                     </p>
                 </fieldset>
             </form>
