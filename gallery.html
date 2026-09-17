@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gallery of our beauty salon">
-  <meta name="author" content="Dayana Rebotunova">
-  <title>Gallery</title>
+  <meta name="description" content="Салон красоты Khadisha в Астане">
+  <title>О салоне | Khadisha</title>
 </head>
 
 <body>
 
-<!-- Author: Dayana Rebotunova -->
-
 <header>
-  <h1>Our Gallery</h1>
+  <h1>О салоне Khadisha</h1>
 
-  <!-- I use nav here because these links help users move between our pages -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="booking.html">Booking</a></li>
-      <li><a href="masters.html">Masters</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contacts.html">Contacts</a></li>
-      <li><a href="colophon.html">Colophon</a></li>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="booking.html">Запись</a></li>
+      <li><a href="masters.html">Мастера</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="colophon.html">О проекте</a></li>
     </ul>
   </nav>
 </header>
@@ -34,149 +30,117 @@
 <main>
 
   <section id="gallery">
-    <h2>Beauty Works</h2>
+    <h2>Наш салон</h2>
 
     <p>
-      On this page you can see different works from the beauty salon.
-      Our team has not chosen the final salon yet, so we will add
-      real photos later. We want to show different services like
-      haircuts, manicure and makeup
+      <strong>Khadisha</strong> — салон красоты в Астане.
+      Здесь можно сделать уход за волосами, <em>маникюр</em>, педикюр,
+      макияж и посетить косметолога.
+      На этой странице представлены фотографии салона и его рабочих зон
     </p>
 
     <p>
-      The gallery can help customers choose a service before they
-      visit the salon. They can see examples and decide what style
-      they like. We will use only real photos from the salon
+      Интерьер выполнен в современном стиле, есть отдельные места
+      для разных процедур и уютная зона ожидания
     </p>
 
-    <p>
-      <a href="#hair">Go to hair works</a><br>
-      <a href="#nails">Go to nail works</a>
-    </p>
+    <!-- figure используется, потому что фотографии имеют собственные подписи -->
+    <figure>
+      <img src="images/khadisha-reception.jpg" width="400" height="300"
+           alt="Зона ресепшена салона красоты Khadisha">
+      <figcaption>Зона ресепшена салона красоты Khadisha</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/khadisha-interior.jpg" width="400" height="300"
+           alt="Интерьер и зона ожидания салона красоты Khadisha">
+      <figcaption>Интерьер и зона ожидания для клиентов</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/khadisha-hair-area.jpg" width="400" height="300"
+           alt="Рабочие места парикмахеров в салоне Khadisha">
+      <figcaption>Рабочая зона для ухода за волосами</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/khadisha-cosmetology.jpg" width="400" height="300"
+           alt="Косметологический кабинет салона Khadisha">
+      <figcaption>Косметологический кабинет</figcaption>
+    </figure>
   </section>
 
-
-  <section id="hair">
-    <h2>Hair Works</h2>
+  <section id="services">
+    <h2>Что можно сделать в салоне</h2>
 
     <article>
-      <h3>Haircuts and Styling</h3>
+      <h3>Услуги Khadisha</h3>
 
       <p>
-        Here we will add examples of haircuts and styling.
-        Different customers like different hairstyles.
-        Some people like <b>simple haircuts</b> and other
-        people like <i>creative styles</i>
+        В салоне представлены разные направления красоты.
+        Можно записаться на уход за волосами,
+        сделать маникюр или педикюр,
+        подготовить макияж к мероприятию
+        или посетить косметолога
       </p>
 
-      <!-- We will put our own photo here -->
-      <figure>
-        <p>[Photo will be added later]</p>
-        <figcaption>Example of a hairstyle from the salon.</figcaption>
-      </figure>
+      <dl>
+        <dt><b>Волосы</b></dt>
+        <dd>Уход за волосами и создание нового образа</dd>
 
-      <p>
-        A new hairstyle can <mark>change the appearance</mark>
-        of a person. A master can also help the customer
-        choose a suitable hairstyle.
-      </p>
+        <dt><b>Маникюр</b></dt>
+        <dd>Уход за ногтями и руками</dd>
+
+        <dt><b>Педикюр</b></dt>
+        <dd>Уход за стопами и ногтями</dd>
+
+        <dt><b>Макияж</b></dt>
+        <dd>Макияж для повседневной жизни и праздников</dd>
+
+        <dt><b>Косметология</b></dt>
+        <dd>Процедуры по уходу за кожей</dd>
+      </dl>
     </article>
   </section>
 
-
-  <section id="nails">
-    <h2>Nail Works</h2>
-
-    <article>
-      <h3>Manicure</h3>
-
-      <p>
-        Manicure is another popular beauty service.
-        We will add real examples of manicure from our salon here.
-        Customers will be able to look at different colors
-        and designs.
-      </p>
-
-      <figure>
-        <p>[Photo will be added later]</p>
-        <figcaption>Example of manicure work</figcaption>
-      </figure>
-    </article>
-  </section>
-
-
-  <section>
-    <h2>Our Service Types</h2>
-
-    <dl>
-      <dt>Haircut</dt>
-      <dd>A service for changing the hairstyle</dd>
-
-      <dt>Manicure</dt>
-      <dd>A beauty service for nails and hands</dd>
-
-      <dt>Makeup</dt>
-      <dd>A service for everyday or special events</dd>
-    </dl>
-  </section>
-
-
-  <section>
-    <h2>Our Plan</h2>
+  <section id="visit">
+    <h2>Перед посещением</h2>
 
     <ol start="1">
-      <li>Choose a beauty salon in Astana</li>
-
       <li>
-        Visit the salon and collect:
+        Выберите нужную услугу
         <ul>
-          <li>photos;</li>
-          <li>information about services;</li>
-          <li>information about masters</li>
+          <li>Волосы</li>
+          <li>Маникюр или педикюр</li>
+          <li>Макияж</li>
+          <li>Косметология</li>
         </ul>
       </li>
-
-      <li>Add real information to our website</li>
+      <li>Свяжитесь с салоном</li>
+      <li>Выберите удобную дату и время</li>
+      <li>Приходите к назначенному времени</li>
     </ol>
+
+    <aside>
+      <p>
+        <i>Салон работает ежедневно с 10:00 до 20:00</i>
+      </p>
+    </aside>
   </section>
-
-
-  <aside>
-    <h2>Note</h2>
-
-    <p>
-      The final version of this page will have
-      <strong>real photos</strong> taken by our team
-    </p>
-  </aside>
-
 
   <hr>
 
-
   <p>
-    <abbr title="HyperText Markup Language">HTML</abbr>
-    is used to create this website
-    We study basic
-    <abbr title="World Wide Web">WWW</abbr>
-    technologies in this project
-  </p>
-
-
-  <p>
-    <small>Page created by Dayana Rebotunova</small>
-  </p>
-
-
-  <p>
-    <a href="#gallery">Back to the top</a>
+    Перейти к разделу
+    <a href="#gallery">«Наш салон»</a>
+    или
+    <a href="#services">«Услуги Khadisha»</a>
   </p>
 
 </main>
 
-
 <footer>
-  <p>&copy; 2026 Beauty Salon Project &amp; AITU</p>
+  <p><small>&copy; 2026 Khadisha Beauty Salon &amp; AITU</small></p>
 </footer>
 
 </body>
