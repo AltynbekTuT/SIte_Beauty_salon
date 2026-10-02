@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Контакты и график работы салона красоты Khadisha">
   <title>Контакты | Khadisha</title>
+  <link rel="stylesheet" href="css/base.css">
   <meta name="author" content="Dayana Rebotunova">
 </head>
 
@@ -21,8 +22,6 @@
       <li><a href="booking.html">Онлайн-запись</a></li>
       <li><a href="colophon.html">О разработке</a></li>
       <li><a href="masters.html">Мастера</a></li>
-      <li><a href="reviews.html">Отзывы</a></li>
-      <li><a href="gallery.html">Галерея</a></li>
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
   </nav>
@@ -80,25 +79,6 @@
     </table>
   </section>
 
-  <section>
-    <h2>Как записаться</h2>
-
-    <ol start="1">
-      <li>
-        Выберите нужную услугу:
-        <ul>
-          <li>Волосы</li>
-          <li>Маникюр</li>
-          <li>Педикюр</li>
-          <li>Макияж</li>
-          <li>Косметология</li>
-        </ul>
-      </li>
-      <li>Свяжитесь с салоном</li>
-      <li>Выберите удобное время</li>
-      <li>Приходите по адресу ул. Туркестан, 16/1</li>
-    </ol>
-  </section>
 
   <section>
     <h2>Цитата:</h2>
@@ -111,97 +91,11 @@
     </blockquote>
   </section>
 
-  <section id="form">
-    <h2>Форма записи</h2>
-
     <p>
       Вы можете заполнить форму для примера записи в салон(Пример т.к. сервера нет).
     </p>
 
-    <form method="get" action="contacts.html">
 
-      <fieldset>
-        <legend>Ваши данные</legend>
-
-        <p>
-          <label for="name">Имя:</label>
-          <input type="text" id="name" name="name"
-                 placeholder="Введите ваше имя" required>
-        </p>
-
-        <p>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"
-                 placeholder="example@mail.com" required>
-        </p>
-
-        <p>
-          <label for="phone">Телефон:</label>
-          <input type="tel" id="phone" name="phone"
-                 placeholder="+7 777 000 00 00" required>
-        </p>
-
-        <p>
-          <label for="age">Возраст:</label>
-          <input type="number" id="age" name="age"
-                 min="1" max="100">
-        </p>
-
-        <p>
-          <label for="date">Дата посещения:</label>
-          <input type="date" id="date" name="date" required>
-        </p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Информация о записи</legend>
-
-        <p>Способ связи</p>
-
-        <input type="radio" id="contact-phone"
-               name="contact-method" value="phone" required>
-        <label for="contact-phone">Телефон</label>
-
-        <input type="radio" id="contact-email"
-               name="contact-method" value="email">
-        <label for="contact-email">Email</label>
-
-        <p>
-          <label for="service">Выберите услугу:</label>
-
-          <select id="service" name="service" required>
-            <option value="">Выберите услугу</option>
-            <option value="hair">Волосы</option>
-            <option value="manicure">Маникюр</option>
-            <option value="pedicure">Педикюр</option>
-            <option value="makeup">Макияж</option>
-            <option value="cosmetology">Косметология</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="message">Комментарий:</label><br>
-          <textarea id="message" name="message"
-                    rows="5" cols="40"
-                    placeholder="Напишите комментарий"></textarea>
-        </p>
-
-        <p>
-          <input type="checkbox" id="agreement"
-                 name="agreement" required>
-          <label for="agreement">
-            Я подтверждаю введённые данные
-          </label>
-        </p>
-
-      </fieldset>
-
-      <p>
-        <input type="submit" value="Отправить">
-        <input type="reset" value="Очистить">
-      </p>
-
-    </form>
   </section>
 
   <aside>
@@ -217,7 +111,7 @@
   <p>
     <a href="#contacts">Вернуться к контактам</a>
     или
-    <a href="#form">перейти к форме записи</a>
+    <a href="booking.html">перейти к форме записи</a>
   </p>
 
 </main>
