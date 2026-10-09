@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Отзывы клиентов Khadisha Beauty Salon.">
     <meta name="author" content="Ayan Kereitbayev">
-    <title>Khadisha Beauty Salon — Отзывы</title>
+    <title>Отзывы | Khadisha</title>
     <!-- Bootstrap версии 5.3.3 (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
@@ -28,7 +28,6 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
                 <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
-                <li class="nav-item"><a class="nav-link" href="colophon.html">О разработке</a></li>
                 <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
                 <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
@@ -45,17 +44,17 @@
             <!-- Сетка: отзыв и фото в одной строке; на телефоне друг под другом, с планшета (md) рядом -->
             <div class="row g-4 align-items-center">
             <article class="col-12 col-md-7">
-                <h3>Отзыв от Динары С.</h3>
+                <h3>Отзыв от Сании А.</h3>
                 <p><strong>Услуга:</strong> Сложное окрашивание Airtouch</p>
                 <!-- Компонент Bootstrap: Badge (https://getbootstrap.com/docs/5.3/components/badge/).
                      Что изменили: цвет text-bg-primary подменён на цвет сайта в base.css, текст оценки оставили как был -->
                 <p><em>Оценка: <span class="badge text-bg-primary">5 из 5</span></em></p>
-                <p>Очень довольна результатом! Алина подобрала идеальный оттенок, волосы выглядят ухоженными и живыми.</p>
+                <p>Очень довольна результатом! Арайлым подобрала идеальный оттенок, волосы выглядят ухоженными и живыми.</p>
             </article>
 
             <figure class="col-12 col-md-5 text-center">
                 <img class="img-fluid rounded shadow-sm" src="images/review-photo.jpg" alt="Результат окрашивания волос у клиента" width="400">
-                <figcaption>Результат визита к мастеру Алине</figcaption>
+                <figcaption>Результат визита к мастеру Арайлым</figcaption>
             </figure>
             </div>
         </section>
@@ -105,10 +104,10 @@
                     <p class="col-12 col-md-4 mb-0">
                         <label class="form-label" for="used-service">Какую услугу вы получали:</label>
                         <select class="form-select" id="used-service" name="service_used">
-                            <option value="haircut">Женская стрижка</option>
-                            <option value="coloring">Окрашивание</option>
-                            <option value="manicure">Маникюр</option>
-                            <option value="other">Другое</option>
+                            <option value="haircut">Женская стрижка и укладка</option>
+                            <option value="coloring">Сложное окрашивание Airtouch</option>
+                            <option value="manicure">Аппаратный маникюр с покрытием</option>
+                            <option value="pedicure">SPA-педикюр</option>
                         </select>
                     </p>
 
@@ -141,8 +140,27 @@
         </section>
     </main>
     <footer class="text-center py-3 mt-4">
-        <p>Адрес: г. Астана, пр. Кабанбай батыра, 53 | Телефон: <a href="tel:+77172000000">+7 (7172) 00-00-00</a> | Email: <a href="mailto:info@example-salon.kz">info@example-salon.kz</a></p>
-        <p>&copy; 2026 Салон красоты &laquo;Пример&raquo;. Все права защищены.</p>
+        <p>
+            <strong>Khadisha Beauty Salon</strong>
+        </p>
+        <p>
+            Адрес: г. Астана, ул. Туркестан, 16
+        </p>
+        <p>
+            Телефон:
+            <a href="tel:+77771367376">+7 777 136 73 76</a>
+        </p>
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/khadisha_salon/"
+               target="_blank"
+               rel="noopener noreferrer">
+                @khadisha_salon
+            </a>
+        </p>
+        <p>
+            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
+        </p>
     </footer>
 
     <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->

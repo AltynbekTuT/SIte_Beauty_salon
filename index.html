@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
     <link rel="stylesheet" href="css/base.css">
-    <title>Салон красоты «Khadisha» — Главная страница</title>
+    <title>Салон красоты Khadisha</title>
 </head>
 <body>
     <!-- Автор страницы: Yeszhanov Altynbek -->
@@ -30,8 +30,8 @@
                 <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
                 <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
-                <li class="nav-item"><a class="nav-link" href="colophon.html">О разработке</a></li>
                 <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
             </div>
@@ -48,12 +48,8 @@
             <h2>Добро пожаловать в наш салон</h2>
             <p class="lead">Мы предлагаем профессиональный уход за вашей внешностью с 2020 года. Наш салон использует только <strong>качественную косметику</strong> и качественные приборы.</p>
 
-            <figure>
-                <img class="img-fluid rounded shadow-sm" src="images/Salon_inside.png" alt="Как в внутри главного зала салона красоты с парикмахерскими креслами" width="400" height="300">
-                <figcaption>Главный зал нашего салона красоты</figcaption>
-            </figure>
 
-            <p class="small text-muted">Быстрый переход к разделам этой страницы: <a href="#philosophy">Наша видение</a> или <a href="#quote-section">Отзыв владельца</a>.</p>
+            <p class="small text-muted">Быстрый переход к разделам этой страницы: <a href="#philosophy">Наше видение</a> или <a href="#quote-section">Слово основателю</a>.</p>
             <p class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2">
                 <a class="btn btn-primary btn-lg" href="booking.html">Записаться онлайн</a>
                 <a class="btn btn-outline-primary btn-lg" href="services.html">Услуги и цены</a>
@@ -62,23 +58,19 @@
         </div>
 
         <article class="col-12 col-lg-5" id="philosophy">
-            <h2>Наша видение и стандарты</h2>
+            <h2>Наше видение и стандарты</h2>
             <p>Каждый клиент для нас &mdash; это <em>важная личность</em>. Мы соблюдаем все нормы качества</p>
             <p>Мы гарантируем качество <mark>абсолютно для всех</mark> предоставляемых услуг.</p>
         </article>
 
         <aside class="col-12 col-md-6" id="quote-section">
             <h3>Слово основателю</h3>
-            <blockquote class="blockquote" cite="https://example.com/interview">
+            <blockquote class="blockquote">
                 <p><q>Красота &mdash; это не просто внешний вид, это состояние уверенности в себе.</q></p>
             </blockquote>
-            <p>&mdash; <cite>Милана Серебкова</cite>, арт-директор салона.</p>
+            <p>&mdash; <cite>Динара Адильжанкызы</cite>, владелица салона.</p>
         </aside>
 
-        <!-- Комментарий: div использован здесь исключительно как нейтральная обертка для декоративного блока со спецпредложением, так как никакой семантический тег верхнего уровня не подходит -->
-        <!-- Компонент Bootstrap: Alert (https://getbootstrap.com/docs/5.3/components/alerts/).
-        Что изменили: взяли вариант alert-warning без кнопки закрытия, вставили наш текст о скидке,
-        колонку col-md-6 сделали отдельной обёрткой, чтобы отступы колонки не ломали отступы alert. -->
         <div class="col-12 col-md-6">
             <div class="special-badge alert alert-warning text-center" role="alert">
                 <p class="mb-0">Скидка <b>10%</b> при первом визите через бронирования через сайт!</p>
@@ -88,8 +80,27 @@
     </main>
 
     <footer class="text-center py-3 mt-4">
-        <p>Адрес: г. Астана, Улица Туркестан, 16 | Телефон: <a href="tel:+77771367376">+7-777-136-73-76</a> | Email: <a href="mailto:info@khadisha-salon.kz">info@khadisha-salon.kz</a></p>
-        <p>&copy; 2022 Салон красоты &laquo;Khadisha&raquo;. Все права защищены.</p>
+        <p>
+            <strong>Khadisha Beauty Salon</strong>
+        </p>
+        <p>
+            Адрес: г. Астана, ул. Туркестан, 16
+        </p>
+        <p>
+            Телефон:
+            <a href="tel:+77771367376">+7 777 136 73 76</a>
+        </p>
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/khadisha_salon/"
+               target="_blank"
+               rel="noopener noreferrer">
+                @khadisha_salon
+            </a>
+        </p>
+        <p>
+            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
+        </p>
     </footer>
 
     <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->

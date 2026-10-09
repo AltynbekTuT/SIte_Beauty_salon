@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
     <link rel="stylesheet" href="css/base.css">
-    <title>Салон красоты «Пример» — Онлайн-запись</title>
+    <title>Онлайн-запись | Khadisha</title>
 </head>
 <body>
     <!-- Автор страницы: Yeszhanov Altynbek -->
@@ -30,8 +30,8 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
                 <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="booking.html">Онлайн-запись</a></li>
-                <li class="nav-item"><a class="nav-link" href="colophon.html">О разработке</a></li>
                 <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
             </div>
@@ -40,10 +40,10 @@
     </header>
 
     <!-- container: основной контент в колонке ограниченной ширины -->
-    <main class="container py-4">
-        <div class="row g-4">
-        <section class="col-12 col-lg-8">
-            <h2>Заполните форму для бронирования</h2>
+    <main class="container py-1">
+        <div class="row g-1">
+        <section class="col-12 col-lg-12">
+            <h2 align="center">Заполните форму для бронирования</h2>
 
             <!-- Форма содержит все 9 обязательных типов полей и элементов -->
             <form action="#" method="post">
@@ -93,9 +93,9 @@
                     <p class="col-12 col-md-6 mb-0">
                         <label class="form-label" for="service-select">Выберите необходимую услугу:</label>
                         <select class="form-select" id="service-select" name="service_type">
-                            <option value="haircut">Женская стрижка</option>
-                            <option value="coloring">Окрашивание волос</option>
-                            <option value="manicure">Аппаратный маникюр</option>
+                            <option value="haircut">Женская стрижка и укладка</option>
+                            <option value="coloring">Сложное окрашивание Airtouch</option>
+                            <option value="manicure">Аппаратный маникюр с покрытием</option>
                             <option value="pedicure">SPA-педикюр</option>
                         </select>
                     </p>
@@ -119,29 +119,40 @@
                         </label>
                     </p>
 
-                    <p class="col-12 d-flex flex-wrap gap-2 mb-0">
+                    <p class="col-12 col-lg-12">
                         <input class="btn btn-primary btn-lg" type="submit" value="Отправить заявку">
                         <input class="btn btn-outline-secondary btn-lg" type="reset" value="Сбросить форму">
-                        <button class="btn btn-secondary btn-lg" type="button" disabled>Оплата онлайн (скоро)</button>
                     </p>
                 </div>
                 </fieldset>
             </form>
         </section>
 
-        <!-- d-none d-md-block: на телефоне фото скрыто, чтобы не удлинять страницу; с планшета (md) показывается -->
-        <aside class="col-12 col-lg-4 d-none d-md-block">
-            <figure>
-                <img class="img-fluid rounded shadow-sm" src="https://github.com/AltynbekTuT/SIte_Beauty_salon/blob/main/images/khadisha-reception.jpg?raw=true" width="500" height="400" alt="Администратор салона за стойкой рецепции отвечает на звонок">
-                <figcaption>Наши администраторы всегда готовы подсказать свободное время</figcaption>
-            </figure>
-        </aside>
         </div>
     </main>
 
     <footer class="text-center py-3 mt-4">
-        <p>Адрес: г. Астана, Улица Туркестан, 16 | Телефон: <a href="tel:+77771367376">+7-777-136-73-76</a> | Email: <a href="mailto:info@khadisha-salon.kz">info@khadisha-salon.kz</a></p>
-        <p>&copy; 2022 Салон красоты &laquo;Khadisha&raquo;. Все права защищены.</p>
+        <p>
+            <strong>Khadisha Beauty Salon</strong>
+        </p>
+        <p>
+            Адрес: г. Астана, ул. Туркестан, 16
+        </p>
+        <p>
+            Телефон:
+            <a href="tel:+77771367376">+7 777 136 73 76</a>
+        </p>
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/khadisha_salon/"
+               target="_blank"
+               rel="noopener noreferrer">
+                @khadisha_salon
+            </a>
+        </p>
+        <p>
+            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
+        </p>
     </footer>
 
     <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->
