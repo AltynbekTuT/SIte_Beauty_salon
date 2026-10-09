@@ -178,8 +178,6 @@ body {
 
 /* ==========================================================================
    Задание 3: Bootstrap 5.3.3
-   Всё, что выше, не тронуто. Ниже добавленный слой: цвета бренда
-   через переменные Bootstrap и перекраска синих элементов.
    ========================================================================== */
 
 /* Цвета бренда: Bootstrap читает эти переменные сам */
@@ -198,9 +196,10 @@ body {
 /* Цвета меню */
 .navbar {
     --bs-navbar-color: #3d302d;
-    --bs-navbar-hover-color: #7a4f48;
-    --bs-navbar-active-color: #7a4f48;
+    --bs-navbar-hover-color: #ffffff;
+    --bs-navbar-active-color: #3d302d;
     --bs-navbar-brand-color: #3d302d;
+    --bs-navbar-active-hover-color: #3d302d;
 }
 
 /* Кнопки: у btn-primary цвет в Bootstrap задан синей константой,
