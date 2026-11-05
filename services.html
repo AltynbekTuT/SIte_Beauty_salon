@@ -1,163 +1,104 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Прайс-лист и подробный перечень услуг салона красоты: парикмахерские услуги, ногтевой сервис и косметология.">
-    <meta name="author" content="Yeszhanov Altynbek">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Услуги Khadisha Beauty Salon и цены мастеров разных уровней." name="description"/>
+
     <title>Услуги и цены | Khadisha</title>
-    <!-- Bootstrap версии 5.3.3 (CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
-    <link rel="stylesheet" href="css/base.css">
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+    <link href="css/base.css" rel="stylesheet"/>
 </head>
 <body>
-
-    <header class="py-3 text-center">
-        <!-- container-fluid: шапка это полоса фона на всю ширину окна, поэтому меню растягивается от края до края.
-             Основное содержимое ниже лежит в обычном container: у него ограниченная ширина, строки текста читаются легче. -->
-        <div class="container-fluid">
-        <h1 class="display-5 fw-bold mb-3">Услуги и стоимость обслуживания</h1>
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Главное меню">
-            <!-- d-lg-none: слово «Меню» видно на телефоне и планшете, на широком экране скрыто -->
-            <span class="navbar-brand d-lg-none">Меню</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Открыть меню">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-            <ul class="navbar-nav">
+<header class="py-3 text-center">
+    <div class="container-fluid">
+        <h1 class="display-5 fw-bold mb-3">Услуги и цены</h1>
+        <nav aria-label="Главное меню" class="site-nav">
+            <ul class="nav justify-content-center gap-2">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="services.html">Услуги и цены</a></li>
+                <li class="nav-item"><a aria-current="page" class="nav-link active" href="services.html">Услуги и цены</a></li>
                 <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
                 <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
                 <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-            </div>
         </nav>
-        </div>
-    </header>
+    </div>
+</header>
 
-    <!-- container: основной контент в колонке ограниченной ширины -->
-    <main class="container py-4">
-        <section class="mb-4">
-            <h2>Официальный прайс-лист</h2>
-            
-            <!-- Обязательная таблица с полной семантической структурой -->
-            <!-- Компонент Bootstrap: Tables (https://getbootstrap.com/docs/5.3/content/tables/).
-            Что изменили: table-striped и table-hover вместо наших рамок и подсветки строк,
-            обёртка table-responsive, чтобы таблица прокручивалась внутри блока и не раздвигала страницу на телефоне. -->
-            <div class="table-responsive">
-            <table class="table table-striped table-hover caption-top">
-                <caption>Прайс-лист на базовые услуги салона на 2026 год</caption>
+<main class="container py-4">
+    <section class="mb-4">
+        <h2>Услуги и ориентировочная стоимость</h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover caption-top" id="services-table">
+                <caption>Сравните базовый тариф и тариф топ-мастера</caption>
                 <thead>
-                    <tr>
-                        <th scope="col">Категория</th>
-                        <th scope="col">Наименование услуги</th>
-                        <th scope="col">Длительность</th>
-                        <th scope="col">Стоимость</th>
-                    </tr>
+                <tr>
+                    <th scope="col">Категория</th>
+                    <th scope="col">Наименование услуги</th>
+                    <th scope="col">Длительность</th>
+                    <th scope="col">Мастер</th>
+                    <th scope="col">Топ-мастер</th>
+                    <th scope="col">Запись</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr class="rowcolor">
-                        <th scope="row" rowspan="2">Парикмахерский зал</th>
-                        <td>Женская стрижка и укладка</td>
-                        <td>60 мин</td>
-                        <td>10 000 &#8376;</td>
-                    </tr>
-                    <tr>
-                        <td>Сложное окрашивание (Airtouch)</td>
-                        <td>180 мин</td>
-                        <td>35 000 &#8376;</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" rowspan="2">Ногтевой сервис</th>
-                        <td>Аппаратный маникюр с покрытием</td>
-                        <td>90 мин</td>
-                        <td>12 000 &#8376;</td>
-                    </tr>
-                    <tr>
-                        <td>SPA-педикюр</td>
-                        <td>90 мин</td>
-                        <td>15 000 &#8376;</td>
-                    </tr>
+                <tr><td colspan="6" class="text-center text-muted">Загрузка каталога…</td></tr>
                 </tbody>
             </table>
-            </div>
-        </section>
+        </div>
 
-        <section class="mb-4">
-            <h2>Порядок предоставления услуг</h2>
-            <!-- Компонент Bootstrap: Card (https://getbootstrap.com/docs/5.3/components/card/).
-                 Что изменили: три карточки без картинок, внутри наши старые списки (ol, вложенный ul, dl).
-                 Сетка col-12 col-md-6 col-lg-4: на телефоне по одной в ряд, на планшете по две, на компьютере по три. -->
-            <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body">
-            <!-- Нумерованный список с атрибутом start -->
-            <ol start="1">
-                <li>Предварительная консультация с мастером.</li>
-                <li>Подбор профессиональных косметических средств.</li>
-                <li>Выполнение процедуры и рекомендации по домашнему уходу.</li>
-            </ol>
+        <div class="summary-panel p-3 p-md-4 mt-3" id="services-total">
+            <h3 class="h5">Предварительный расчёт визита</h3>
+            <p class="mb-2">Сравните тарифы мастера и топ-мастера, затем выберите услугу в форме записи. Итоговую стоимость подтвердит администратор.</p>
+            <a class="btn btn-primary" href="booking.html">Перейти к записи</a>
+        </div>
+    </section>
 
-            </div></div></div>
-            <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body">
-            <h3 class="card-title h5">Категории мастеров</h3>
-            <!-- Вложенный список -->
-            <ul>
-                <li>Стилисты
-                    <ul>
-                        <li>Мастер 1-й категории</li>
-                        <li>Топ-стилист</li>
-                    </ul>
-                </li>
-                <li>Нейл-дизайнеры</li>
-            </ul>
+    <section class="mb-4">
+        <div class="section-heading"><p class="eyebrow">Забота в деталях</p><h2>Популярные направления</h2><p>Выберите то, что подходит именно вам. Перед процедурой мастер уточнит пожелания и детали ухода.</p></div>
+        <div class="row g-3">
+            <article class="col-12 col-md-6 col-lg-4"><div class="card service-feature h-100"><img class="service-feature-photo" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&fm=jpg&q=85&w=900" alt="Мастер выполняет стрижку в салоне" loading="lazy"/><div class="card-body"><p class="eyebrow">Волосы</p><h3 class="h5">Свежий образ</h3><p>Стрижки, укладки, сложное окрашивание и восстановление волос.</p><a href="booking.html?service=haircut">Смотреть услуги →</a></div><p class="photo-credit px-3 pb-2">Фото: <a href="https://unsplash.com/s/photos/beauty-salon" rel="noopener noreferrer" target="_blank">Unsplash</a></p></div></article>
+            <article class="col-12 col-md-6 col-lg-4"><div class="card service-feature h-100"><img class="service-feature-photo" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&fm=jpg&q=85&w=900" alt="Мастер делает маникюр клиенту" loading="lazy"/><div class="card-body"><p class="eyebrow">Ногти</p><h3 class="h5">Уход для рук и ног</h3><p>Маникюр, педикюр и дизайн с аккуратным покрытием.</p><a href="booking.html?service=manicure">Смотреть услуги →</a></div><p class="photo-credit px-3 pb-2">Фото: <a href="https://unsplash.com/s/photos/beauty-salon" rel="noopener noreferrer" target="_blank">Unsplash</a></p></div></article>
+            <article class="col-12 col-md-6 col-lg-4"><div class="card service-feature h-100"><img class="service-feature-photo" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&fm=jpg&q=85&w=900" alt="Клиент получает процедуру ухода за лицом" loading="lazy"/><div class="card-body"><p class="eyebrow">Косметология и SPA</p><h3 class="h5">Время для себя</h3><p>Уходовые процедуры, очищение кожи и расслабляющий массаж.</p><a href="booking.html?service=facial-care">Смотреть услуги →</a></div><p class="photo-credit px-3 pb-2">Фото: <a href="https://unsplash.com/s/photos/beauty-salon" rel="noopener noreferrer" target="_blank">Unsplash</a></p></div></article>
+        </div>
+    </section>
 
-            </div></div></div>
-            <div class="col-12 col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body">
-            <h3 class="card-title h5">Глоссарий процедур</h3>
-            <!-- Список определений (Definition List) -->
-            <dl>
-                <dt>Airtouch</dt>
-                <dd>Техника окрашивания волос с раздуванием прядей феном для создания мягких переходов.</dd>
-                <dt>SPA-маникюр</dt>
-                <dd>Комплексный уход за кожей рук с применением скрабов и питательных масок.</dd>
-            </dl>
-            </div></div></div>
-            </div>
-        </section>
+    <aside class="border rounded p-3 small text-muted">
+        <p>Мы заботимся о вашем здоровье и используем только гипоаллергенную профессиональную косметику премиум-уровня. <a href="https://cosmex.kz/catalog" rel="noopener noreferrer" target="_blank">Партнерский бренд косметики</a>.</p>
+    </aside>
+</main>
 
-        <aside class="border rounded p-3 small text-muted">
-            <p>Мы заботимся о вашем здоровье и используем только гипоаллергенную профессиональную косметику премиум-уровня.<a href="https://cosmex.kz/catalog" target="_blank" rel="noopener noreferrer">Партнерский бренд косметики</a>.</p>
-        </aside>
-    </main>
+<footer class="text-center py-3 mt-4">
+    <p><strong>Khadisha Beauty Salon</strong></p>
+    <p>Адрес: г. Астана, ул. Туркестан, 16/1, YE’S Astana, офис 1004</p>
+    <p>
+        Телефон:
+        <a href="tel:+77771367376">+7 777 136 73 76</a>
+    </p>
+    <p>
+        Instagram:
+        <a href="https://www.instagram.com/khadisha_salon/" rel="noopener noreferrer" target="_blank">
+            @khadisha_salon
+        </a>
+    </p>
+    <p>
+        © 2026 Khadisha Beauty Salon. Все права защищены.
+    </p>
+</footer>
 
-    <footer class="text-center py-3 mt-4">
-        <p>
-            <strong>Khadisha Beauty Salon</strong>
-        </p>
-        <p>
-            Адрес: г. Астана, ул. Туркестан, 16
-        </p>
-        <p>
-            Телефон:
-            <a href="tel:+77771367376">+7 777 136 73 76</a>
-        </p>
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/khadisha_salon/"
-               target="_blank"
-               rel="noopener noreferrer">
-                @khadisha_salon
-            </a>
-        </p>
-        <p>
-            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
-        </p>
-    </footer>
-
-    <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/services.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

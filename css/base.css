@@ -31,7 +31,7 @@ header {
     text-align: center;
 }
 .rowcolor:hover{
-    background-color: aqua;
+    background-color: #f3e4df;
     color: black;
 }
 h1,
@@ -168,17 +168,11 @@ footer {
 footer a {
     color: #7a4f48;
 }
-body {
-.aSD{
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #3d302d;
-}
-}
+.aSD { margin-bottom: 20px; }
 
-/* ==========================================================================
+/*
    Задание 3: Bootstrap 5.3.3
-   ========================================================================== */
+    */
 
 /* Цвета бренда: Bootstrap читает эти переменные сам */
 :root {
@@ -239,3 +233,265 @@ body {
 .table th {
     --bs-table-bg: #f3e4df;
 }
+
+/* Дополнения для мидки*/
+.site-nav .nav {
+    gap: .2rem .5rem !important;
+    flex-wrap: wrap;
+}
+
+.site-nav .nav-link {
+    color: #3d302d;
+    border-radius: 8px;
+    padding: .5rem .8rem;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    background: #7a4f48;
+    color: #fff;
+}
+
+main {
+    margin-top: 12px;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+}
+
+main section,
+main article,
+main aside {
+    scroll-margin-top: 1.5rem;
+}
+
+.salon-photo {
+    width: 100%;
+    max-height: 310px;
+    object-fit: cover;
+}
+
+.gallery-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.review-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+figure figcaption {
+    font-size: .9rem;
+    padding-top: .4rem;
+    color: #6c5751;
+}
+
+.review-card,
+.contact-panel,
+.summary-panel {
+    background: #fff;
+    border: 1px solid #ead7d0;
+    border-radius: 12px;
+}
+
+.section-heading {
+    margin-bottom: 1.25rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #7a4f48;
+    box-shadow: 0 0 0 .2rem #f3e4df;
+}
+
+.btn {
+    border-radius: 9px;
+}
+
+
+.active {
+    font-weight: 600;
+}
+
+.selected {
+    outline: 2px solid #7a4f48;
+    background-color: #f3e4df;
+}
+
+@media (max-width: 575px) {
+    header {
+        padding: 16px 8px;
+    }
+
+    header h1 {
+        font-size: 1.8rem !important;
+    }
+
+    main {
+        padding: 12px !important;
+    }
+
+    .site-nav .nav-link {
+        font-size: .88rem;
+        padding: .4rem .55rem;
+    }
+
+    .gallery-photo {
+        height: 230px;
+    }
+}
+
+/* Компактные отступы для каталога, форм и карточек */
+header.py-3 {
+    padding-top: .75rem !important;
+    padding-bottom: .75rem !important;
+}
+
+header h1 {
+    margin-bottom: .75rem !important;
+}
+
+main.container {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+main.container.py-4,
+main.container.py-3,
+main.container.py-1 {
+    padding-top: .85rem !important;
+    padding-bottom: .85rem !important;
+}
+
+main .mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+main section,
+main article,
+main aside {
+    margin-bottom: .75rem;
+}
+
+main .row.g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+}
+
+main .row.g-3 {
+    --bs-gutter-y: .85rem;
+}
+
+main fieldset {
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+}
+
+.review-photo {
+    height: 155px;
+}
+
+footer.py-3 {
+    margin-top: 1rem !important;
+    padding-top: .75rem !important;
+    padding-bottom: .5rem !important;
+}
+
+footer p {
+    margin-bottom: .35rem;
+}
+
+main .row > article,
+main .row > figure,
+main .row > div {
+    margin-bottom: 0;
+}
+
+/* Фото и смысловые блоки для новых разделов сайта */
+.eyebrow {
+    color: #9a665d;
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.contact-hero {
+    background: linear-gradient(120deg, #f3e4df 0%, #fffaf8 66%);
+    border: 1px solid #ead7d0;
+    border-radius: 1rem;
+}
+
+.contact-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.contact-info-card,
+.route-card,
+.booking-step,
+.service-feature {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ead7d0;
+    border-radius: .9rem;
+    box-shadow: 0 .25rem .75rem rgba(61, 48, 45, .06);
+}
+
+.contact-info-card {
+    padding: 1.25rem;
+    background: linear-gradient(160deg, #fff 60%, #f8eeeb);
+}
+
+.contact-icon,
+.step-number {
+    display: inline-grid;
+    width: 2.4rem;
+    height: 2.4rem;
+    place-items: center;
+    margin-bottom: .7rem;
+    border-radius: 50%;
+    background: #f3e4df;
+    color: #7a4f48;
+    font-weight: 700;
+}
+
+.route-photo,
+.service-feature-photo,
+.master-photo,
+.booking-step > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.route-photo { height: 215px; }
+.service-feature-photo { height: 195px; }
+.master-photo { height: 185px; border-radius: .65rem; }
+.booking-step > img { height: 165px; }
+
+.master-photo-figure { width: 100%; }
+.review-figure { background: #f8eeeb; }
+.review-photo { display: block; width: 100%; height: 190px; object-fit: cover; }
+.photo-credit { color: #786b68; font-size: .74rem; line-height: 1.35; }
+.photo-credit a { color: #7a4f48; }
+
+.service-feature .card-body { padding: 1.1rem 1.15rem .75rem; }
+.service-feature .card-body p:last-of-type { min-height: 3.2rem; }
+.booking-step .p-3 { padding: 1rem !important; }
+.booking-step h3 { color: #7a4f48; }
+
+@media (max-width: 575.98px) {
+    .contact-photo { height: 240px; }
+    .route-photo { height: 190px; }
+    .service-feature-photo,
+    .booking-step > img { height: 190px; }
+}
+.home-side-panel{height:100%;overflow:hidden;border:1px solid #eadbd5;border-radius:1rem;background:#fffaf8;box-shadow:0 .25rem 1rem rgba(70,42,35,.07)}.home-side-panel h2{color:#7a4f48}.home-points{padding:.85rem 1rem;border-radius:.8rem;background:#f7ece7}.home-points p{margin:0 0 .65rem}.home-points strong{color:#9b655b;margin-right:.55rem}.home-side-photo{display:block;width:100%;height:240px;object-fit:cover}.home-side-panel blockquote{font-size:1rem}@media(max-width:767px){.home-side-photo{height:200px}}

@@ -1,193 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Информация о мастерах Khadisha Beauty Salon и их специализациях.">
-    <meta name="author" content="Ayan Kereitbayev">
-    <!-- Bootstrap версии 5.3.3 (CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
-    <link rel="stylesheet" href="css/base.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Мастера Khadisha Beauty Salon, их специализации и уровни обслуживания." name="description"/>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+    <link href="css/base.css" rel="stylesheet"/>
     <title>Мастера | Khadisha</title>
 </head>
-    
 <body>
-
 <header class="py-3 text-center">
-    <!-- container-fluid: шапка это полоса фона на всю ширину окна, поэтому меню растягивается от края до края.
-         Основное содержимое ниже лежит в обычном container: у него ограниченная ширина, строки текста читаются легче. -->
     <div class="container-fluid">
-        <h1 class="display-5 fw-bold mb-3">Салон красоты &laquo;Khadisha&raquo;</h1>
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Главное меню">
-            <!-- d-lg-none: слово «Меню» видно на телефоне и планшете, на широком экране скрыто -->
-            <span class="navbar-brand d-lg-none">Меню</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Открыть меню">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
-                    <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="masters.html">Мастера</a></li>
-                    <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                </ul>
-            </div>
+        <h1 class="display-5 fw-bold mb-3">Наши мастера</h1>
+        <nav aria-label="Главное меню" class="site-nav">
+            <ul class="nav justify-content-center gap-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
+                <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
+                <li class="nav-item"><a aria-current="page" class="nav-link active" href="masters.html">Мастера</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
         </nav>
     </div>
 </header>
-    <!-- container: основной контент в колонке ограниченной ширины -->
-    <main class="container py-4">
-        <section class="mb-4">
-            <h2>Команда Khadisha Beauty Salon</h2>
-            <p class="lead">
-                В нашем салоне работают мастера, которые помогают клиентам
-                подобрать подходящий образ и получить качественный уход.
-                У каждого специалиста есть своё направление и опыт работы.
-            </p>
-            
-            <!-- Сетка: две колонки col-lg-6 (на телефоне и планшете друг под другом, на компьютере рядом);
-                 линия hr между статьями видна только до lg (d-lg-none), на компьютере статьи стоят рядом -->
-            <div class="row g-4">
-            <article class="col-12 col-lg-6" id="master1">
-                <h3>Мастер по волосам - Арайлым</h3>
-                
-                <p>
-                    <strong>Специализация:</strong>
-                    стрижки, укладки и окрашивание волос.
-                </p>
-                
-                <p>
-                    Мастер помогает подобрать стрижку и цвет волос
-                    с учётом внешности и пожеланий клиента.
-                    В работе особое внимание уделяется аккуратности
-                    и тому, чтобы результат подходил человеку в повседневной жизни.
-                </p>
-
-                <p>
-                    Опыт работы — более <mark>5 лет</mark>.
-                    За это время мастер работала с разными типами волос
-                    и выполняла как простые, так и более сложные процедуры.
-                </p>
-                
-                <figure>
-                    <!-- Вложенная сетка: row внутри колонки. Фото на телефоне друг под другом, с sm в два столбца -->
-<div class="row g-2">
-<div class="col-12 col-sm-6"><img class="img-fluid rounded" src="https://github.com/AltynbekTuT/SIte_Beauty_salon/blob/main/images/haircut1.jpg?raw=true" alt="Волнистые светло-русые волосы после работы мастера Арайлым"
-                         width="400"></div>
-</div>
-
-                    <figcaption>
-                        Работа Арайлым
-                    </figcaption>
-                </figure>
-
-                <blockquote class="blockquote">
-                    <p>
-                        <q>
-                            Хорошая причёска - хорошее начало дня.
-                        </q>
-                    </p>
-                </blockquote>
-                <p>&mdash; <cite>Владелица салона Динара</cite></p>
-            </article>
-
-            <hr class="col-12 d-lg-none">
-
-            <article class="col-12 col-lg-6" id="master2">
-                <h3>Мастер по маникюру - Аружан</h3>
-                <p>
-                    <strong>Специализация:</strong>
-                    маникюр, уход за ногтями и дизайн.
-                </p>
-                <p>
-                    Мастер выполняет классический и аппаратный маникюр,
-                    помогает выбрать форму ногтей и подобрать дизайн.
-                    Отдельное внимание уделяется аккуратности работы
-                    и состоянию ногтей клиента.
-                </p>
-                <p>
-                    Опыт работы — более <mark>4 лет</mark>.
-                    За это время мастер освоила разные техники маникюра
-                    и регулярно следит за новыми тенденциями в дизайне ногтей.
-                </p>
-                <figure>
-                    <!-- Вложенная сетка: row внутри колонки. Фото на телефоне друг под другом, с sm в два столбца -->
-<div class="row g-2">
-<div class="col-12 col-sm-6"><img class="img-fluid rounded" src="https://github.com/AltynbekTuT/SIte_Beauty_salon/blob/main/images/nails1.jpg?raw=true" alt="Маникюр, выполненный мастером Аружан"
-                         width="400"></div>
-</div>
-                    <figcaption>
-                        Работа Аружан
-                    </figcaption>
-                </figure>
-
-                <blockquote class="blockquote">
-                    <p>
-                        <q>
-                            Важен не только результат, но и сам процесс.
-                        </q>
-                    </p>
-                </blockquote>
-                <p>&mdash; <cite>Арт-Директор Молдир</cite></p>
-            </article>
-            </div>
-        </section>
-
-        <section class="mb-4" id="choice">
-            <h2>Как выбрать мастера</h2>
-
-            <p>
-                Если вы посещаете салон впервые, можно выбрать мастера
-                в зависимости от того, какая услуга вам нужна.
-                Для стрижки, окрашивания или укладки лучше обратиться
-                к мастеру по волосам, а для маникюра и дизайна ногтей —
-                к мастеру соответствующего направления.
-            </p>
-
-            <p>
-                Если вы не уверены, какой специалист вам подойдёт,
-                можно обратиться к администратору. Вам помогут выбрать
-                мастера и подходящее время для записи.
-            </p>
-        </section>
-        
-        <div class="schedule-info text-center text-muted">
-            <p>
-                <small>
-                    График Работы: Ежедневно с 10:00 до 20:00.
-                </small>
-            </p>
+<main class="container py-3">
+    <section class="mb-3">
+        <h2>Специалисты Khadisha Beauty Salon</h2>
+        <p class="lead">В команде работают мастера шести направлений. Для каждой услуги можно выбрать базовый тариф или тариф топ-мастера; стоимость зависит от выбранной процедуры.</p>
+        <p class="small text-muted">Имена и стаж в этой учебной версии условные. Фотографии показывают направления работы, а не конкретных специалистов.</p>
+        <div class="row g-3">
+            <article class="col-12 col-md-6 col-lg-4" id="master1"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Арайлым</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · Волосы</span></p><p>Женские и мужские стрижки, окрашивание, уход и восстановление волос.</p><p class="small text-muted mt-auto">Опыт работы — более 5 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master3"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Айгерим</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · Волосы</span></p><p>Стрижки, сложное окрашивание, укладки и восстановление волос.</p><p class="small text-muted mt-auto">Опыт работы — более 4 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master2"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Аружан</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · Ногти</span></p><p>Аппаратный маникюр, уход за ногтями и педикюр.</p><p class="small text-muted mt-auto">Опыт работы — более 4 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master4"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Мадина</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · Ногти</span></p><p>Маникюр с укреплением и дизайном, педикюр и SPA-уход.</p><p class="small text-muted mt-auto">Опыт работы — более 3 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master5"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Жанель</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · Макияж</span></p><p>Дневной и вечерний макияж с подбором образа.</p><p class="small text-muted mt-auto">Опыт работы — более 5 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master7"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Динара</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · Макияж</span></p><p>Вечерний макияж и выразительные образы для особых событий.</p><p class="small text-muted mt-auto">Опыт работы — более 6 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master6"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Асем</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · Косметология</span></p><p>Уходовые процедуры и очищение кожи лица.</p><p class="small text-muted mt-auto">Опыт работы — более 6 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master8"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Лаура</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · Косметология</span></p><p>Уходовые программы и комплексные процедуры для лица.</p><p class="small text-muted mt-auto">Опыт работы — более 7 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master9"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Айсулу</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · Брови и ресницы</span></p><p>Коррекция и окрашивание бровей, ламинирование ресниц.</p><p class="small text-muted mt-auto">Опыт работы — более 3 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master10"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Томирис</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · Брови и ресницы</span></p><p>Архитектура бровей и ламинирование ресниц.</p><p class="small text-muted mt-auto">Опыт работы — более 5 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master11"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Сауле</h3><p class="mb-1"><span class="badge text-bg-light">Мастер · SPA-уход</span></p><p>Расслабляющий массаж и уходовые SPA-процедуры.</p><p class="small text-muted mt-auto">Опыт работы — более 4 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
+            <article class="col-12 col-md-6 col-lg-4" id="master12"><div class="review-card p-3 h-100 d-flex flex-column"><h3 class="h5">Жанар</h3><p class="mb-1"><span class="badge text-bg-primary">Топ-мастер · SPA-уход</span></p><p>Расслабляющие массажные техники и комплексный уход.</p><p class="small text-muted mt-auto">Опыт работы — более 7 лет.</p><a class="btn btn-outline-primary align-self-start" href="booking.html#booking-form">Записаться</a></div></article>
         </div>
-        
-    </main>
-    <footer class="text-center py-3 mt-4">
-        <p>
-            <strong>Khadisha Beauty Salon</strong>
-        </p>
-        <p>
-            Адрес: г. Астана, ул. Туркестан, 16
-        </p>
-        <p>
-            Телефон:
-            <a href="tel:+77771367376">+7 777 136 73 76</a>
-        </p>
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/khadisha_salon/"
-               target="_blank"
-               rel="noopener noreferrer">
-                @khadisha_salon
-            </a>
-        </p>
-        <p>
-            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
-        </p>
-    </footer>
+    </section>
+    <section class="mb-2">
+        <h2>Как выбрать специалиста</h2>
+        <p>Сначала выберите услугу в каталоге. Для каждой процедуры указаны мастер базового тарифа и топ-мастер; в форме записи выберите специалиста из соответствующего направления. Если сомневаетесь, администратор поможет подобрать мастера.</p>
+        <p class="small text-muted">График работы салона: ежедневно с 10:00 до 20:00.</p>
+    </section>
+</main>
+<footer class="text-center py-3 mt-3">
+    <p><strong>Khadisha Beauty Salon</strong></p>
+    <p>Адрес: г. Астана, ул. Туркестан, 16/1, YE’S Astana, офис 1004</p>
+    <p>Телефон: <a href="tel:+77771367376">+7 777 136 73 76</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/khadisha_salon/" rel="noopener noreferrer" target="_blank">@khadisha_salon</a></p>
+    <p class="mb-0">© 2026 Khadisha Beauty Salon. Все права защищены.</p>
+</footer>
 
-    <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/main.js" defer></script>
+<script src="js/masters.js" defer></script>
 </body>
 </html>
+

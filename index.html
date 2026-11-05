@@ -1,109 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Главная страница салона красоты в Астане. Стрижки, маникюр, уход за кожей.">
-    <meta name="author" content="Yeszhanov Altynbek">
-    <!-- Bootstrap версии 5.3.3 (CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
-    <link rel="stylesheet" href="css/base.css">
-    <title>Салон красоты Khadisha</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Главная страница салона красоты в Астане. Стрижки, маникюр, уход за кожей." name="description"/>
+
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+    <link href="css/base.css" rel="stylesheet"/>
+
+    <title>Главная | Khadisha</title>
 </head>
 <body>
-    <!-- Автор страницы: Yeszhanov Altynbek -->
-
-    <header class="py-3 text-center">
-        <!-- container-fluid: шапка это полоса фона на всю ширину окна, поэтому меню растягивается от края до края.
-             Основное содержимое ниже лежит в обычном container: у него ограниченная ширина, строки текста читаются легче. -->
-        <div class="container-fluid">
-        <h1 class="display-5 fw-bold mb-3">Салон красоты &laquo;Khadisha&raquo;</h1>
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Главное меню">
-            <!-- d-lg-none: слово «Меню» видно на телефоне и планшете, на широком экране скрыто -->
-            <span class="navbar-brand d-lg-none">Меню</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Открыть меню">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="index.html">Главная</a></li>
+<header class="py-3 text-center">
+    <div class="container-fluid">
+        <h1 class="display-5 fw-bold mb-3">Салон красоты «Khadisha»</h1>
+        <nav aria-label="Главное меню" class="site-nav">
+            <ul class="nav justify-content-center gap-2">
+                <li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
                 <li class="nav-item"><a class="nav-link" href="booking.html">Онлайн-запись</a></li>
                 <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
                 <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-            </div>
         </nav>
+    </div>
+</header>
+
+<main class="container py-4">
+    <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-lg-7"><section class="aSD border rounded bg-white shadow-sm p-3 p-md-4 text-center text-md-start h-100" id="about">
+            <h2>Добро пожаловать в наш салон</h2><p class="lead">Мы помогаем подобрать процедуры для волос, ногтей, лица и макияжа. Перед визитом мастер уточнит ваши пожелания и предложит подходящий вариант ухода.</p>
+            <p class="small text-muted">Быстрый переход: <a href="#philosophy">Наш подход</a> или <a href="#quote-section">Слово основателю</a>.</p>
+            <p class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2"><a class="btn btn-primary btn-lg" href="booking.html">Записаться онлайн</a><a class="btn btn-outline-primary btn-lg" href="services.html">Услуги и цены</a></p>
+            <figure class="mt-4 mb-0"><img alt="Светлый интерьер салона Khadisha" class="img-fluid rounded salon-photo" loading="lazy" src="images/khadisha-interior.jpg"/><figcaption class="small text-muted mt-2">Уютное пространство Khadisha</figcaption></figure>
+        </section></div>
+        <div class="col-12 col-lg-5"><article class="home-side-panel h-100" id="philosophy">
+            <div class="p-3 p-md-4"><p class="eyebrow mb-2">Забота в каждой детали</p><h2>Красота начинается с комфорта</h2><p>Мы внимательно слушаем ваши пожелания, объясняем этапы процедуры и помогаем выбрать подходящий уход без спешки.</p>
+                <div class="home-points"><p><strong>01</strong> Индивидуальная консультация перед услугой</p><p><strong>02</strong> Спокойная атмосфера и бережный подход</p><p class="mb-0"><strong>03</strong> Понятные цены и выбор мастера</p></div>
+            </div><img class="home-side-photo" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&fm=jpg&q=85&w=1000" alt="Рабочее место мастера в современном салоне" loading="lazy"/>
+            <aside class="p-3 p-md-4" id="quote-section"><h3 class="h5">Слово основателю</h3><blockquote class="blockquote mb-2"><p><q>Красота — это не просто внешний вид, это состояние уверенности в себе.</q></p></blockquote><p class="mb-3">— <cite>Динара Адильжанкызы</cite>, владелица салона.</p><div class="special-badge alert alert-warning mb-0" role="note">Скидку на первый визит можно уточнить у администратора при записи.</div></aside>
+        </article></div>
+    </div>
+
+    <section class="mt-4" id="gallery">
+        <div class="section-heading">
+            <h2>Наш салон</h2>
+            <p>Посмотрите, как выглядит наше пространство.</p>
         </div>
-    </header>
-
-    <!-- container: основной контент в колонке ограниченной ширины -->
-    <main class="container py-4">
-        <div class="row g-4">
-        <!-- Комментарий о выборе тега: Используем section для логической группировки вводной информации о салоне -->
-        <div class="col-12 col-lg-7">
-        <section class="aSD border rounded bg-white shadow-sm p-3 p-md-4 text-center text-md-start" id="about">
-            <h2>Добро пожаловать в наш салон</h2>
-            <p class="lead">Мы предлагаем профессиональный уход за вашей внешностью с 2020 года. Наш салон использует только <strong>качественную косметику</strong> и качественные приборы.</p>
-
-
-            <p class="small text-muted">Быстрый переход к разделам этой страницы: <a href="#philosophy">Наше видение</a> или <a href="#quote-section">Слово основателю</a>.</p>
-            <p class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2">
-                <a class="btn btn-primary btn-lg" href="booking.html">Записаться онлайн</a>
-                <a class="btn btn-outline-primary btn-lg" href="services.html">Услуги и цены</a>
-            </p>
-        </section>
+        <div class="row g-3">
+            <figure class="col-12 col-md-4">
+                <img alt="Зона приёма гостей" class="gallery-photo" loading="lazy" src="images/khadisha-reception.jpg"/>
+                <figcaption>Ресепшен</figcaption>
+            </figure>
+            <figure class="col-12 col-md-4">
+                <img alt="Зона ухода за волосами" class="gallery-photo" loading="lazy" src="images/khadisha-hair-area.jpg"/>
+                <figcaption>Парикмахерская зона</figcaption>
+            </figure>
+            <figure class="col-12 col-md-4">
+                <img alt="Косметологический кабинет" class="gallery-photo" loading="lazy" src="images/khadisha-cosmetology.jpg"/>
+                <figcaption>Кабинет косметологии</figcaption>
+            </figure>
         </div>
+    </section>
+</main>
 
-        <article class="col-12 col-lg-5" id="philosophy">
-            <h2>Наше видение и стандарты</h2>
-            <p>Каждый клиент для нас &mdash; это <em>важная личность</em>. Мы соблюдаем все нормы качества</p>
-            <p>Мы гарантируем качество <mark>абсолютно для всех</mark> предоставляемых услуг.</p>
-        </article>
+<footer class="text-center py-3 mt-4">
+    <p><strong>Khadisha Beauty Salon</strong></p>
+    <p>Адрес: г. Астана, ул. Туркестан, 16/1, YE’S Astana, офис 1004</p>
+    <p>
+        Телефон:
+        <a href="tel:+77771367376">+7 777 136 73 76</a>
+    </p>
+    <p>
+        Instagram:
+        <a href="https://www.instagram.com/khadisha_salon/" rel="noopener noreferrer" target="_blank">
+            @khadisha_salon
+        </a>
+    </p>
+    <p>
+        © 2026 Khadisha Beauty Salon. Все права защищены.
+    </p>
+</footer>
 
-        <aside class="col-12 col-md-6" id="quote-section">
-            <h3>Слово основателю</h3>
-            <blockquote class="blockquote">
-                <p><q>Красота &mdash; это не просто внешний вид, это состояние уверенности в себе.</q></p>
-            </blockquote>
-            <p>&mdash; <cite>Динара Адильжанкызы</cite>, владелица салона.</p>
-        </aside>
-
-        <div class="col-12 col-md-6">
-            <div class="special-badge alert alert-warning text-center" role="alert">
-                <p class="mb-0">Скидка <b>10%</b> при первом визите через бронирования через сайт!</p>
-            </div>
-        </div>
-        </div>
-    </main>
-
-    <footer class="text-center py-3 mt-4">
-        <p>
-            <strong>Khadisha Beauty Salon</strong>
-        </p>
-        <p>
-            Адрес: г. Астана, ул. Туркестан, 16
-        </p>
-        <p>
-            Телефон:
-            <a href="tel:+77771367376">+7 777 136 73 76</a>
-        </p>
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/khadisha_salon/"
-               target="_blank"
-               rel="noopener noreferrer">
-                @khadisha_salon
-            </a>
-        </p>
-        <p>
-            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
-        </p>
-    </footer>
-
-    <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
+

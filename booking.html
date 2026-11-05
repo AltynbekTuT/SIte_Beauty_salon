@@ -1,161 +1,289 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Онлайн-запись на процедуры в салон красоты. Выберите услугу, мастера, дату и время.">
-    <meta name="author" content="Yeszhanov Altynbek">
-    <!-- Bootstrap версии 5.3.3 (CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Наш css/base.css подключён ПОСЛЕ Bootstrap, чтобы наши правила имели приоритет -->
-    <link rel="stylesheet" href="css/base.css">
-    <title>Онлайн-запись | Khadisha</title>
-</head>
-<body>
-    <!-- Автор страницы: Yeszhanov Altynbek -->
+nonRDFaLite = empty
+# #####################################################################
+##  RELAX NG Schema for HTML 5: RDFa 1.1 and RDFa Lite 1.1            #
+# #####################################################################
 
-    <header class="py-3 text-center">
-        <!-- container-fluid: шапка это полоса фона на всю ширину окна, поэтому меню растягивается от края до края.
-             Основное содержимое ниже лежит в обычном container: у него ограниченная ширина, строки текста читаются легче. -->
-        <div class="container-fluid">
-        <h1 class="display-5 fw-bold mb-3">Онлайн-запись на визит</h1>
-        <nav class="navbar navbar-expand-lg p-0" aria-label="Главное меню">
-            <!-- d-lg-none: слово «Меню» видно на телефоне и планшете, на широком экране скрыто -->
-            <span class="navbar-brand d-lg-none">Меню</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Открыть меню">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Услуги и цены</a></li>
-                <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="booking.html">Онлайн-запись</a></li>
-                <li class="nav-item"><a class="nav-link" href="masters.html">Мастера</a></li>
-                <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
-            </div>
-        </nav>
-        </div>
-    </header>
+# #####################################################################
+##  RDFa Datatypes                                                    #
+# #####################################################################
 
-    <!-- container: основной контент в колонке ограниченной ширины -->
-    <main class="container py-1">
-        <div class="row g-1">
-        <section class="col-12 col-lg-12">
-            <h2 align="center">Заполните форму для бронирования</h2>
+common.data.rdfa.safecurie =
+xsd:string {
+pattern = "\[(([\i-[:]][\c-[:]]*)?:?)[^\s]*\]"
+minLength = "2"
+}
+common.data.rdfa.curie =
+xsd:string {
+pattern = "(([\i-[:]][\c-[:]]*)?:)[^\s]*"
+minLength = "1"
+}
+common.data.rdfa.term =
+xsd:string {
+pattern = "[\i-[:]][/\c-[:]]*"
+}
 
-            <!-- Форма содержит все 9 обязательных типов полей и элементов -->
-            <form action="#" method="post">
-                <!-- Серверная обработка формы пока не подключена, так как серверный функционал не входит в рамки данного задания -->
-                
-                <fieldset class="a12 border rounded p-3 mb-4">
-                    <legend class="float-none w-auto px-2 fs-5">Контактная информация клиента</legend>
-                    <!-- Вложенная сетка: row внутри колонки формы. На телефоне поля друг под другом, с планшета (md) три в ряд -->
-                    <div class="row g-3">
-                    
-                    <p class="col-12 col-md-4 mb-0">
-                        <label class="form-label" for="client-name">Ваше полное имя:</label>
-                        <input class="form-control" type="text" id="client-name" name="client_name" placeholder="Ержан Алиев" required>
-                    </p>
+# #####################################################################
+##  RDFa Attributes                                                   #
+# #####################################################################
 
-                    <p class="col-12 col-md-4 mb-0">
-                        <label class="form-label" for="client-email">Электронная почта:</label>
-                        <input class="form-control" type="email" id="client-email" name="client_email" placeholder="example@domain.kz" required>
-                    </p>
+common.attrs.rdfa &=
+(	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.property?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.content?
+&	common.attrs.rdfa.datatype?
+&	common.attrs.rdfa.rel?
+&	common.attrs.rdfa.resource?
+&	common.attrs.rdfa.rev?
+&	common.attrs.rdfa.inlist?
+)
+common.attrs.rdfa.prefix =
+attribute prefix {
+(
+xsd:string {
+pattern = "\s*([\i-[:]][\c-[:]]*: [^ ]+)(\s+[\i-[:]][\c-[:]]*: [^ ]+)*\s*"
+}
+|	string ""
+)
+}
+common.attrs.rdfa.property =
+attribute property {
+(
+list {
+(	common.data.rdfa.term
+|	common.data.rdfa.curie
+|	common.data.uri.absolute
+)+
+}
+|	string ""
+)
+}
+common.attrs.rdfa.resource =
+attribute resource {
+(	common.data.rdfa.safecurie
+|	common.data.rdfa.curie
+|	common.data.uri
+)
+}
+common.attrs.rdfa.typeof =
+attribute typeof {
+(
+list {
+(	common.data.rdfa.term
+|	common.data.rdfa.curie
+|	common.data.uri.absolute
+)+
+}
+|	string ""
+)
+}
+common.attrs.rdfa.vocab =
+attribute vocab {
+(	common.data.uri.absolute
+|	string ""
+)
+}
+common.attrs.rdfa.about =
+attribute about {
+(	common.data.rdfa.safecurie
+|	common.data.rdfa.curie
+|	common.data.uri
+)
+} & nonRDFaLite
+common.attrs.rdfa.content =
+attribute content {
+string
+} & nonRDFaLite
+common.attrs.rdfa.datatype =
+attribute datatype {
+(	common.data.rdfa.term
+|	common.data.rdfa.curie
+|	common.data.uri.absolute
+|	string ""
+)
+} & nonRDFaLite
+common.attrs.rdfa.rel =
+attribute rel {
+(
+list {
+(	common.data.rdfa.term
+|	common.data.rdfa.curie
+|	common.data.uri.absolute
+)+
+}
+|	string ""
+)
+} & nonRDFaLite
+common.attrs.rdfa.rev =
+attribute rev {
+(
+list {
+(	common.data.rdfa.term
+|	common.data.rdfa.curie
+|	common.data.uri.absolute
+)+
+}
+|	string ""
+)
+} & nonRDFaLite
+common.attrs.rdfa.inlist =
+attribute inlist {
+string
+} & nonRDFaLite
 
-                    <p class="col-12 col-md-4 mb-0">
-                        <label class="form-label" for="client-phone">Номер телефона:</label>
-                        <input class="form-control" type="tel" id="client-phone" name="client_phone" placeholder="+77011234567" required>
-                    </p>
-                    </div>
-                </fieldset>
+common.attrs.rdfa.no-rel &=
+(	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.property?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.content?
+&	common.attrs.rdfa.datatype?
+&	common.attrs.rdfa.resource?
+&	common.attrs.rdfa.rev?
+&	common.attrs.rdfa.inlist?
+)
+common.attrs.rdfa.no-rel-rev &=
+(	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.property?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.content?
+&	common.attrs.rdfa.datatype?
+&	common.attrs.rdfa.resource?
+&	common.attrs.rdfa.inlist?
+)
+common.attrs.rdfa.no-content-noproperty &=
+(	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.datatype?
+&	common.attrs.rdfa.resource?
+&	common.attrs.rdfa.inlist?
+)
 
-                <fieldset class="border rounded p-3 mb-4">
-                    <legend class="float-none w-auto px-2 fs-5">Детали записи</legend>
-                    <div class="row g-3">
+common.attrs &= common.attrs.rdfa
 
-                    <p class="col-12 col-sm-6 col-md-4 mb-0">
-                        <label class="form-label" for="booking-date">Желаемая дата визита:</label>
-                        <input class="form-control" type="date" id="booking-date" name="booking_date" required>
-                    </p>
+a.attrs &= common.attrs.rdfa.no-rel-rev
+area.attrs &= common.attrs.rdfa.no-rel
+base.attrs &= common.attrs.rdfa.no-rel
 
-                    <p class="col-12 col-sm-6 col-md-4 mb-0">
-                        <label class="form-label" for="booking-time">Желаемое время визита:</label>
-                        <input class="form-control" type="time" id="booking-time" name="booking_time" required>
-                    </p>
+link.rdfa.elem.metadata =
+element link { link.inner & link.rdfa.attrs.metadata }
+link.rdfa.elem.phrasing =
+element link { link.inner & link.rdfa.attrs.phrasing }
+link.rdfa.attrs.metadata =
+(	common.attrs.basic
+&	common.attrs.i18n
+&	common.attrs.present
+&	common.attrs.other
+&	(	(	common.attrs.rdfa.property
+&	link.attrs.rel?
+)
+|
+(	common.attrs.rdfa.property?
+&	link.attrs.rel
+)
+)
+&	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.content?
+&	common.attrs.rdfa.datatype?
+&	(	(	common.attrs.rdfa.resource
+&	link.attrs.href?
+)
+|
+(	common.attrs.rdfa.resource?
+&	link.attrs.href
+)
+)
+&	common.attrs.rdfa.rev?
+&	common.attrs.rdfa.inlist?
+&	shared-hyperlink.attrs.hreflang?
+&	shared-hyperlink.attrs.media?
+&	shared-hyperlink.attrs.type?
+&	link.attrs.sizes?
+&	link.attrs.as?
+#	link.attrs.title included in common.attrs
+&	embedded.content.attrs.crossorigin?
+&	(	common.attrs.aria.role.link
+|	common.attrs.aria.role.presentation
+|	common.attrs.aria.role.menuitem
+)?
+)
+link.rdfa.attrs.phrasing =
+(	common.attrs.basic
+&	common.attrs.i18n
+&	common.attrs.present
+&	common.attrs.other
+&	common.attrs.rdfa.property
+&	link.attrs.rel?
+&	(	(	common.attrs.rdfa.resource
+&	link.attrs.href?
+)
+|
+(	common.attrs.rdfa.resource?
+&	link.attrs.href
+)
+)
+&	common.attrs.rdfa.about?
+&	common.attrs.rdfa.prefix?
+&	common.attrs.rdfa.typeof?
+&	common.attrs.rdfa.vocab?
+&	common.attrs.rdfa.content?
+&	common.attrs.rdfa.datatype?
+&	common.attrs.rdfa.rev?
+&	common.attrs.rdfa.inlist?
+&	shared-hyperlink.attrs.hreflang?
+&	shared-hyperlink.attrs.media?
+&	shared-hyperlink.attrs.type?
+&	link.attrs.sizes?
+#	link.attrs.title included in common.attrs
+&	embedded.content.attrs.crossorigin?
+&	(	common.attrs.aria.role.link
+|	common.attrs.aria.role.presentation
+|	common.attrs.aria.role.menuitem
+)?
+)
+common.elem.metadata |= link.rdfa.elem.metadata
+common.elem.phrasing |= link.rdfa.elem.phrasing
 
-                    <p class="col-12 col-md-4 mb-0">
-                        <label class="form-label" for="guest-count">Количество человек:</label>
-                        <input class="form-control" type="number" id="guest-count" name="guest_count" min="1" max="5" value="1" required>
-                    </p>
+## <meta property=foo content=bar> in head ("name" attribute optional)
+meta.property.elem =
+element meta { meta.inner & meta.property.attrs }
+meta.property.attrs =
+(	common.attrs.basic
+&	common.attrs.i18n
+&	common.attrs.present
+&	common.attrs.other
+&	meta.name.attrs.name?
+&	common.attrs.rdfa.property
+&	meta.name.attrs.content
+)
+common.elem.metadata |= meta.property.elem
 
-                    <p class="col-12 col-md-6 mb-0">
-                        <label class="form-label" for="service-select">Выберите необходимую услугу:</label>
-                        <select class="form-select" id="service-select" name="service_type">
-                            <option value="haircut">Женская стрижка и укладка</option>
-                            <option value="coloring">Сложное окрашивание Airtouch</option>
-                            <option value="manicure">Аппаратный маникюр с покрытием</option>
-                            <option value="pedicure">SPA-педикюр</option>
-                        </select>
-                    </p>
+## <meta property=foo content=bar> in body ("name" attribute disallowed)
+meta.property-no-name.elem =
+element meta { meta.inner & meta.property-no-name.attrs }
+meta.property-no-name.attrs =
+(	common.attrs.basic
+&	common.attrs.i18n
+&	common.attrs.present
+&	common.attrs.other
+&	common.attrs.rdfa.property
+&	meta.name.attrs.content
+&	(	common.attrs.aria.role.presentation
+|	common.attrs.aria.role.menuitem
+)?
+)
+common.elem.phrasing |= meta.property-no-name.elem
 
-                    <fieldset class="col-12 col-md-6">
-                        <legend class="fs-6">Выберите категорию специалиста:</legend>
-                        <label class="me-3"><input class="form-check-input me-1" type="radio" name="master_qualification" value="standard" checked> Мастер</label>
-                        <label class="me-3"><input class="form-check-input me-1" type="radio" name="master_qualification" value="top"> Топ-стилист</label>
-                    </fieldset>
-
-                    <p class="col-12 mb-0">
-                        <label class="form-label" for="special-wishes">Особые пожелания или комментарии:</label><br>
-                        <textarea class="form-control" id="special-wishes" name="wishes" rows="4" cols="50" placeholder="Укажите аллергические реакции или особые пожелания..."></textarea>
-                    </p>
-
-                    <p class="col-12 mb-0">
-                        <label class="form-check-label">
-                            <!-- Комментарий: span использован исключительно для оборачивания выделенного текста внутри лейбла -->
-                            <input class="form-check-input me-2" type="checkbox" name="policy_agreement" value="agreed" required>
-                            Я ознакомлен с <span class="highlight fw-semibold">правилами посещения</span> салона
-                        </label>
-                    </p>
-
-                    <p class="col-12 col-lg-12">
-                        <input class="btn btn-primary btn-lg" type="submit" value="Отправить заявку">
-                        <input class="btn btn-outline-secondary btn-lg" type="reset" value="Сбросить форму">
-                    </p>
-                </div>
-                </fieldset>
-            </form>
-        </section>
-
-        </div>
-    </main>
-
-    <footer class="text-center py-3 mt-4">
-        <p>
-            <strong>Khadisha Beauty Salon</strong>
-        </p>
-        <p>
-            Адрес: г. Астана, ул. Туркестан, 16
-        </p>
-        <p>
-            Телефон:
-            <a href="tel:+77771367376">+7 777 136 73 76</a>
-        </p>
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/khadisha_salon/"
-               target="_blank"
-               rel="noopener noreferrer">
-                @khadisha_salon
-            </a>
-        </p>
-        <p>
-            &copy; 2026 Khadisha Beauty Salon. Все права защищены.
-        </p>
-    </footer>
-
-    <!-- Bootstrap JS (bundle) нужен для кнопки-переключателя меню -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+meta.property.attrs &= common.attrs.rdfa.no-content-noproperty
+meta.property-no-name.attrs &= common.attrs.rdfa.no-content-noproperty
+meta.name.attrs &= common.attrs.rdfa.no-content-noproperty
